@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <title>Gurumurthy Anagandhula</title>
+    <meta property="og:title" content="Gurumurthy Anagandhula"/>
+    <meta name="description" content="Gurumurthy Anagandhula 3D Portfolio"/>
+    <meta property="og:description" content="Gurumurthy Anagandhula 3D Portfolio"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <img src="images/mute.png" class="audio-button" id="audioButton" alt="Play Audio" height="20" width="30">
+          <audio id="audio" src="images/epic-emotional-36sec-197088.mp3"></audio>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"/></svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
+        </div>
+      </div>
+      
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+            <!-- Intro Stuff -->
+            <div class="intro-text">Welcome to Gurumurthy Anagandhula's portfolio!</div>
+
+            <div class="arrow-svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Gurumurthy Anagandhula</h1>
+              <p class="hero-main-description">Full Stack Developer</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Gurumurthy Anagandhula</p>
+              <p class="hero-second-subheading second-sub">Portfolio</p>
+            </div>
+
+          </div>
+
+        </section>
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+          </div>
+          
+          
+          <div class="section-detail-wrapper">
+            <!-- <h3 class="section-heading">Hello!</h3> -->
+            
+            <p class="section-text">My name is Gurumurthy Anagandhula and I'm reacently Graduated from Concordia University in Masters in Information System Security</p>
+            <p class="section-text">As a Junior Software Engineer at IVY Comptech, I led the development of a sophisticated CRM system using Java and the Spring framework, implementing robust RESTful APIs to ensure seamless module communication. </p>
+            <p class="section-text">With a Master of Engineering degree in Information Systems Security from Concordia University, I possess extensive expertise in system integration, cryptography, and security evaluation methodologies. 
+              Proficient in Python, Java, SQL, HTML,CSS and JavaScript, I've engineered innovative solutions across diverse platforms, including projects in machine learning and neural networks.</p>
+            <p class="section-text">Driven by a fervent enthusiasm for advancing Information Systems Security and Software Engineering, I am eager to leverage my technical acumen and collaborative mindset to drive transformative impact for organizations.I have a deep foundational understanding of Web application penetration testing, classic encryption and cryptography, as well as operating system and network security such as intrusion detection/prevention systems. I am well-versed in not only the application of modern defense solutions, but also the development and testing of custom security protocols.</p>            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 id="education"><i>EDUCATION</i></h1>
+            <br>
+            <br>
+            <br>
+            <p><img src="images/concordia-logo.webp" alt="Concordia University Logo"></p>
+            <br>
+            <br>
+            <h3 id="-government-college-of-engineering-and-leather-technology-https-www-linkedin-com-school-gcelt-trk-public_profile_school-"><a href="https://www.linkedin.com/school/concordia-university/">Concordia University</a></h3>
+            <br>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology">Masters in Information System Security</h4>
+            <br>
+            <br>
+            <p>CGPA - 3.5 / 4.0</p>
+            <br>
+            <p>[ May 2022  -  Dec 2023 ]</p>
+            <br>
+            <p><strong>Relevant Coursework:</strong> System Integration and Testing, Foundation of Cryptography, Operating System Security, Crypto Protocol and Networks Security, System Physical Security, System modeling and Simulation, Security Evaluation Methodologies, Embedded System Security</p>
+            <br>
+            <br>
+            <p id="guru"><img src="images/sreenidhi-logo_ozqc4u.png" alt="sreenidhi institute of science and technology logo" height="120px" weight="110px"></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3 id="-government-college-of-engineering-and-leather-technology-https-www-linkedin-com-school-gcelt-trk-public_profile_school-"><a href="https://www.linkedin.com/school/sreenidhi-snist/">sreenidhi institute of science and technology</a></h3>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Bachelors in Computer science</h4>
+            <br>
+            <br>
+            <p>CGPA - 9.0 / 10.0</p>
+            <br>
+            <p>[ May 2017  -  Aug 2021 ]</p>
+            <br>
+            <p><strong>Relevant Coursework:</strong> C programming, Discrete Mathematics, Algorithms, Linear Algebra, Software Design and Implementation, AI and ML, DS, Microprocessors, DBMS, Statistics, Data Science, Computer Networks, Web Technologies, Compiler Design, Cloud Computing.</p>
+            <br>
+            <br>
+            <br>
+            <h1 id="education"><i>TECHNICAL SKILLS</i></h1><br>
+            <div class="row">
+              <div class="column">
+                <p id="Programming_Languages"><i> Programming Languages </i><br><br>
+                  <div class="image-wrapper">
+                  <div class="image-container">
+                    <a href="https://www.java.com" target="_blank" rel="noreferrer" > 
+                          <img src="images/free-java-9294874-7578017.webp" alt="java" width="60" height="60" ><span class="image-description">Java</span>
+                    </a>
+                    </div>
+                    <div class="image-container">
+                  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="60" height="60"/><span class="image-description">Python</span>
+                  </a>
+                </div>
+                  <div class="image-container">
+                  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="60" height="60"/><span class="image-description">C Programming</span> </a>
+                </div>
+                  <div class="image-container">
+                  <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="60" height="60"/><span class="image-description">C++</span> </a> 
+                </div>
+                  <div class="image-container">
+                  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="50" height="50"/><span class="image-description">Kotlin</span> </a>
+                </div>
+              </div>
+                </p>
+              </div>
+            <div class="column">
+            <p id="Web_Technologies"><i> Web Technologies </i><br><br>
+              <div class="image-wrapper">
+                <div class="image-container">
+              <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="60" height="60"/><span class="image-description">HTML</span> </a>
+            </div>
+              <div class="image-container">
+              <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="60" height="60"/><span class="image-description">CSS</span></a>
+            </div>
+              <div class="image-container">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/><span class="image-description">JavaScript</span></a>
+            </div>
+              <div class="image-container">
+              <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="60" height="60"/><span class="image-description">React</span> </a>
+            </div>
+              <div class="image-container">
+              
+                <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="60" height="60"/> <span class="image-description">Node.js</span></a>
+            </div>
+              <div class="image-container">
+              <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="60" height="60"/> <span class="image-description">Angular</span></a>
+            </div>
+          </div>
+              </p>
+            </div>
+            </div>
+            <div class="row"><br>
+            <div class="column">
+              <p id="Database"><i> Database </i><br><br>
+                <div class="image-wrapper">
+                  <div class="image-container">
+              <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60"/> <span class="image-description">My SQL</span></a>
+            </div>
+            <div class="image-container">
+              <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="60" height="60"/><span class="image-description">Postgre SQL</span> </a>
+            </div>
+            <div class="image-container">
+              <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="60" height="60"/> <span class="image-description">Mongo DB</span></a>
+            </div>
+            <div class="image-container">
+              <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="60" height="60"/> <span class="image-description">Oracle</span></a>
+            </div>
+            <div class="image-container">
+              <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="60" height="60"/><span class="image-description">SQL Server</span> </a>
+            </div>
+            <div class="image-container">
+              <a href="https://hadoop.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" alt="hadoop" width="60" height="60"/> <span class="image-description">Hadoop</span></a>
+            </div>
+          </div>
+            </p>
+            </div>
+            <div class="column">
+            <p id="3D_UI"><i>3D UI/UX </i> <br><br>
+              <div class="image-wrapper">
+                <div class="image-container">
+              <a href="https://spline.design/" target="_blank" rel="noreferrer"> <img src="images/spline.png" alt="spline" width="60" height="60"/> <span class="image-description">Spline</span></a>
+            </div>
+              <div class="image-container">
+              <a href="https://threejs.org/" target="_blank" rel="noreferrer"> <img src="images/three.png" alt="three.org" width="60" height="60"/><span class="image-description">Three.js</span> </a>
+            </div>
+              <div class="image-container">
+              <a href="https://www.blender.org/about/" target="_blank" rel="noreferrer"> <img src="images/Blender_logo_no_text.svg.png" alt="blender" width="60" height="60"/><span class="image-description">Blender</span> </a>
+            </div>
+              <div class="image-container">
+              <a href="https://www.figma.com/files/recents-and-sharing/recently-viewed?fuid=1360108775196812671" target="_blank" rel="noreferrer"> <img src="images/Figma-1-logo.png" alt="figma" width="80" height="60"/><span class="image-description">Figma</span> </a>
+            </div>
+          </div>
+            </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <p id="IDE"><i>Integrated Development Environments (IDEs)</i> <br><br>
+                <div class="image-wrapper">
+                  <div class="image-container">
+                <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img src="images/9055829_bxl_visual_studio_icon.png" alt="android" width="60" height="60"/> <span class="image-description">VS code</span></a>
+              </div>
+                <div class="image-container">
+                <a href="https://www.anaconda.com/" target="_blank" rel="noreferrer"> <img src="images/anaconda.png" alt="anaconda" width="60" height="60"/><span class="image-description">Anaconda</span> </a>
+              </div>
+                <div class="image-container">
+                <a href="https://developer.apple.com/documentation/xcode" target="_blank" rel="noreferrer"> <img src="images/Xcode_14_icon.png" alt="android" width="60" height="60"/><span class="image-description">X Code</span>  </a>
+              </div>
+                <div class="image-container">
+                <a href="https://eclipseide.org/" target="_blank" rel="noreferrer"> <img src="images/kisspng-eclipse-computer-icons-integrated-development-envi-eclipse-5ac531e02a77f0.157488451522872800174.jpg" alt="android" width="60" height="60"/><span class="image-description">Eclipse</span>  </a>
+              </div>
+                <div class="image-container">
+              
+                <a href="https://www.jetbrains.com/pycharm/#:~:text=PyCharm%20has%20all%20of%20the,projects%20%E2%80%93%20all%20in%20one%20IDE."  target="_blank" rel="noreferrer"> <img src="images/PyCharm_Icon.svg.png" alt="android" width="60" height="60"/><span class="image-description">PyCharm</span>  </a>
+              </div>
+                <div class="image-container">
+                <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="60" height="60"/><span class="image-description">Android</span>  </a>
+              </div>
+            </div>
+              </p>
+            </div>
+            <div class="column">
+              <p id="Development_Tools"><i>Development Tools </i><br><br>
+                
+                  <div class="image-wrapper">
+                <div class="image-container">
+              <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="60" height="60"/> <span class="image-description">AWS</span> </a>
+              </div>
+              <div class="image-container">
+
+              <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="60" height="60"/><span class="image-description">Docker</span>  </a> 
+            </div>
+            </div>
+            </p>
+            </div>
+          </div>
+            <div class="column">
+            <p id="Version Controls"><i>Version Controls </i><br><br>
+              <div class="image-wrapper">
+                <div class="image-container">
+              <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="60" height="60"/> <span class="image-description">Git</span> </a>
+            </div>
+          </div>
+            </p>
+            </div>
+            <br>
+            <br>
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Projects</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Portfolio Website</h3>
+            <p class="section-text">My portfolio project showcases my proficiency in web development and design. Developed using HTML, CSS, and JavaScript, the website is fully responsive, ensuring seamless user experience across various devices and screen sizes.<br> <br>Through meticulous attention to detail, I implemented media queries and optimized page loading speeds to enhance performance and accessibility. The portfolio features a clean and modern design, highlighting my projects, skills, and achievements in a visually appealing manner. Additionally, I integrated contact forms with backend services, facilitating communication and engagement with potential clients and collaborators. This project not only demonstrates my technical skills but also reflects my commitment to quality and user-centric design principles.</p>
+            <br>
+            <p><picture> <img src="images/portfolio_project.png" width="500"></picture></p>
+            <br>
+            <p><a href="https://superb-gingersnap-8156d1.netlify.app/" title="Portfolio Website" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+              
+            
+            <h3 class="section-heading">Fruit Kingdom</h3>
+            <p class="section-text">My fruit-selling website offers a convenient and hassle-free way to purchase fresh fruits. With busy schedules in mind, I've created a user-friendly platform where customers can browse through a wide selection of fruits, place orders, and have them delivered right to their doorstep. <br><br>Whether you're craving juicy strawberries, crisp apples, or tropical mangoes, my website has got you covered. I've prioritized simplicity and efficiency in the shopping experience, ensuring that even the busiest individuals can easily navigate the site and complete their purchase in just a few clicks. Additionally, I've implemented secure payment processing to provide peace of mind to customers when making transactions online. From the comfort of their homes or on-the-go, users can enjoy the convenience of shopping for high-quality fruits anytime, anywhere. With a commitment to customer satisfaction and timely delivery, my fruit-selling website aims to make healthy eating accessible and effortless for everyone.
+            </p>
+            <br>
+            <p><picture> <img src="images/fruit.png" width="500"></picture></p>
+            <br>
+            <p> <a href="https://www.youtube.com/watch?v=Py7gpVbwbUo&ab_channel=Guru" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+
+            <h3 class="section-heading">Travel Around The World</h3>
+            <p class="section-text">Introducing my latest web creation—a comprehensive platform for seamless travel and hotel bookings. This user-friendly website simplifies the process of planning and booking your next adventure, offering a one-stop solution for all your travel needs. From flights and accommodations to rental cars and activities, our platform provides a wide range of options to suit every traveler's preferences and budget.
+<br><br>
+              With intuitive search and filter functionalities, users can easily find the perfect destination, hotel, and travel package to suit their needs. Whether you're planning a weekend getaway or a month-long expedition, our website offers convenience, reliability, and peace of mind every step of the way.
+             <br> 
+              Designed with responsive layout and secure payment processing, our travel and hotel booking web page ensures a seamless and enjoyable experience for users, allowing them to focus on the excitement of their upcoming journey.<br></p>
+            <br><br>
+            <p><picture> <img src="images/around.png" width="500"></picture></p>
+            <br>
+            <p><a href="https://www.youtube.com/watch?v=5Lir3dqvyn4&ab_channel=Guru" title="Travel Around The World" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            <h3 class="section-heading">Apple E-Commerce</h3>
+            <p class="section-text">I'm thrilled to present the Apple E-Commerce website, a project I've created with a focus on simplicity, variety, and convenience. With this platform, users can explore a diverse array of apple varieties, from classic favorites to unique specialties, all sourced from top-quality orchards.
+<br><br>
+              Designed with user experience in mind, I've crafted an intuitive interface that guides visitors seamlessly through the browsing and purchasing process. Features such as secure payment options and efficient delivery services ensure a hassle-free shopping experience from start to finish.
+              <br><br>
+              Whether you're a baking enthusiast in need of fresh ingredients or simply craving a healthy snack, our e-commerce platform offers the perfect solution. Join me in celebrating the beauty and versatility of apples, and elevate your fruit-shopping experience with our curated selection.
+              
+               </p>
+               <br>
+            <picture> <img src="images/apple.png" width="500"></picture>
+            <br>
+            <br>
+            <p><a href="https://github.com/Guruanagandhula/apple-ecommerce" title="Apple E-Commerce" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            
+            <h3 class="section-heading">Split landing Page</h3>
+            <p class="section-text">This is a split landing page showcasing the dynamic cities of Montreal and Quebec. Divided into two halves, the page offers an immersive exploration of each destination's unique attractions and cultural heritage.<br> <br>Through captivating visuals and engaging narratives, users are invited to delve into Montreal's vibrant neighborhoods, eclectic arts scene, and culinary delights, while also discovering the historic charm and modern allure of Quebec's urban centers. Designed with intuitive navigation and responsive layout, the split landing page ensures a seamless user experience across devices. Whether planning a visit, seeking inspiration for future travels, or simply indulging in armchair exploration, this project serves as a virtual gateway to the captivating beauty and diversity of Montreal and Quebec's cities.</p>
+
+              <br>
+            <picture> <img src="images/split.png" width="500"></picture>
+            <br>
+            <br>
+            <p><a href="https://www.youtube.com/watch?v=wnvR1o6yBho&ab_channel=Guru" title="Split_landing_Page" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+          </div>
+        </section>
+        
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Work Experience</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">03</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <p><img src="images/ivy_comptech_logo.jpeg" alt="Ivy logo"></p>
+            <br>
+            <br>
+            <h4 id="-cyber-intelligence-solutions-https-www-linkedin-com-company-official-cis-trk-public_profile_experience-item_profile-section-card_subtitle-click-"><a href="https://www.linkedin.com/company/ivy-comptech/" target="_blank">Ivy Comptech</a></h4>
+            <br>
+            <p><strong>Software Engineer Trainee</strong> [ Sept 2021  -  Apr 2022 ]</p>
+            <br>
+            <p>• Developed a customer relationship management (CRM) system using Java and the Spring framework.<br>
+               • Implemented RESTful APIs to facilitate efficient communication between various CRM system modules.<br>
+               • Collaborated with the testing team to identify and resolve software defects, ensuring the delivery of a high-quality product.<br></p>
+            <br>
+            <br>
+            <p><img src="images/1644088580619_cantileverlogoblack.png" alt="Cantilever logo"></p>
+            <br>
+            <br>
+            <h4 id="-cyber-intelligence-solutions-https-www-linkedin-com-company-official-cis-trk-public_profile_experience-item_profile-section-card_subtitle-click-"><a href="https://www.linkedin.com/company/cantileverlabs/" target="_blank">Cantilever Labs</a></h4>
+            <br>
+            <p><strong>Web Application Intern</strong> [ May 2020  -  Jul 2020 ]</p>
+            
+            <br>
+            <p>• Collaborated within a cohesive team structure to enhance the Online Banking Website Application.<br>
+               • Spearheaded the design and implementation of critical modules such as the Home page, Dashboard, Registration, Transactions, and Bank Balance sections.<br>
+               • Executed strategic optimizations resulting in a commendable 20% decrease in page load times, ensuring a seamless user experience.<br>
+               • Conducted comprehensive testing and debugging procedures, leading to a notable 30% reduction in reported issues.<br>
+               • Partnered collaboration across diverse teams, enabling the timely completion of project milestones and deliverables, achieving an impressive 95% on-time completion rate.<br></p>
+            <br>
+            <br>
+            <p><img src="images/images.png" alt="Coign logo"></p>
+            <br>
+            <br>
+            <h4 id="-cyber-intelligence-solutions-https-www-linkedin-com-company-official-cis-trk-public_profile_experience-item_profile-section-card_subtitle-click-">Coign Solutions</h4>
+            <br>
+            <p><strong>Android Application Intern</strong> [ May 2019  -  Jul 2019 ]</p>
+            
+            <br>
+            <p>• Cooperated with the core team to develop a mobile application for providing recruitment information for multinational companies.<br>
+              •	Implemented key modules including Home page, MNC List, and Recruitment Information.<br>
+              •	Enhanced user engagement by optimizing app performance, resulting in a 25% increase in average session duration.<br>
+              •	Led testing and debugging, resulting in a 40% reduction in app crashes.<br>
+              •	Engaged team members to ensure project milestones, achieving a 90% adherence to deadlines<br></p>
+            <br>
+            <br>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            
+          </div>
+        </section>
+
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">CONTACT</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">04</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">LinkedIn</h3>
+            <p class="section-text">Feel free to connect with me on LinkedIn if you're seeking a skilled developer proficient in the following areas: Python, Java, C++, C#, GoLang, Scala, database management systems , web technologies (HTML, CSS, JavaScript, GraphQL, React.js, Node.js), development tools (Visual Studio Code, XCode, Eclipse, Azure, AWS), workflow automation (Apache Airflow, Agile, SASS, OpenAI), web application frameworks (MVC, Spring Boot), and version control (Git).  Let's connect and discuss how I can contribute to your team's success! </p>
+            <br>
+            <p><a href="https://www.linkedin.com/in/gurumurthy-angandhula/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a> </p>
+            <h3 class="section-heading">Github</h3>
+            <p class="section-text">Each day, I dedicate time to working on projects, which I then diligently upload to GitHub. This routine not only allows me to continually refine my coding skills but also showcases my ongoing growth and commitment to learning within the development community.</p>
+            <br>
+            <p><a href="https://github.com/Guruanagandhula" target="_blank"><img src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white" alt="Github"></a> </p>
+            <h3 class="section-heading">Leetcode</h3>
+            <p class="section-text">I regularly engage in coding challenges on platforms like LeetCode to hone my skills and stay updated with the latest techniques and algorithms. This consistent practice not only sharpens my problem-solving abilities but also keeps me abreast of industry trends and innovations in software development.</p>
+            <br>
+            <br>
+            <p><a href="https://leetcode.com/GuruAnagan/" target="_blank"><img src="images/social.png" alt="Leetcode" height="25px" width="55px" class="rounded-image"></a> </p>
+            <br>
+            <br>
+            <p>
+              <a href="mailto:guruanagandhula123@gmail.com" class="gmail-link">
+                  <img src="images/gmail.png" alt="gmail" height="25px" width="55px" class="rounded-image-gmail">
+                  Guruanagandhula123@gmail.com
+              </a>
+          </p>
+          <br>
+          <br>
+          <p><a href="tel:+1 438 866 1347" class="gmail-link">
+            <img src="images/3d-rendering-phone-call-icon-isolated-on-transparent-background-png.png" alt="Call" height="25px" width="55px">
+             +1 (438)-866-1347 
+        </a></p>
+                      
+          </div>
+        </section>
+        <footer class="footer">
+          <span class="footer__copyright">Copyright &copy; 2024 - Gurumurthy Anagandhula </span>
+        </footer><br><br>
+
+
+
+  
+
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
