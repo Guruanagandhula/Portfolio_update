@@ -20,5 +20,4 @@ document.addEventListener("DOMContentLoaded", function() {
         audio.currentTime = 0; 
         audio.play(); 
     });
-
 });
